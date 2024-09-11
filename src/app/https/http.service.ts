@@ -10,7 +10,7 @@ import { environment } from 'src/envirment/environment';
 export class HttpService {
   private baseUrl = environment.apiUrl;
   //product end point
-  private productEndpoint = 'product';
+  private productEndpoint = '/product';
   constructor(private http: HttpClient) {}
 
   // GET request to retrieve products
