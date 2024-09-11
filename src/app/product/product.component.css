@@ -1,0 +1,13 @@
+.btn-primary {
+    background-color: lightgreen;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: rgb(95, 241, 95);
+}
+
+.responsive-img{
+    max-width: 100px;
+    height: auto;
+}

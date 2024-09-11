@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif !important;
+    height: 100% !important;
+}
+
+ul {
+    list-style: none !important;
+}
+
+.nav-bar {
+    background-color: #343a40 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: white !important;
+}
+
+.nav-bar a {
+    color: white !important;
+}
+
+.top-nav li {
+    display: inline-block;
+    padding: 15px 15px 15px 0px !important;
+}
+
+.title {
+    padding-left: 15px !important;
+    font-size: 20px !important;
+}
+
+.wrraper {
+    display: flex !important;
+}
+
+.left-content {
+    background-color: #f8f9fa !important;
+    flex: 3 !important;
+    min-height: 90vh !important;
+}
+
+.side-menu {
+    margin-top: 20px !important;
+}
+
+.side-menu li {
+    border-bottom: dashed 1px #cfd3d8 !important;
+}
+
+.side-menu a {
+    display: block !important;
+    padding: 10px 15px !important;
+    color: #343a40 !important;
+    text-decoration: none !important;
+}
+
+.right-content {
+    padding: 20px !important;
+    flex: 9 !important;
+}
+
+table {
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: transparent !important;
+    border-collapse: collapse !important;
+    border-top: 1px solid #dee2e6 !important;
+    border-left: 1px solid #dee2e6 !important;
+}
+
+table thead th {
+    vertical-align: bottom !important;
+}
+
+td,
+th {
+    padding: 0.3rem !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    border-right: 1px solid #dee2e6 !important;
+}
+
+table td,
+table th {
+    padding: 0.75rem !important;
+    vertical-align: top !important;
+}
+
+.btn,
+button {
+    display: inline-block !important;
+    background: #007bff !important;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+    border-radius: 20px !important;
+    margin-bottom: 15px !important;
+    text-align: center !important;
+    border: none !important;
+}
+
+.btn-del {
+    background: #dc3545 !important;
+}
+
+form {
+    max-width: 450px !important;
+    width: 100% !important;
+    margin: auto !important;
+}
+
+label {
+    display: block !important;
+    font-size: 18px !important;
+    margin-top: 15px !important;
+    line-height: 30px !important;
+}
+
+input {
+    display: block !important;
+    width: 100% !important;
+    height: 35px !important;
+    border: turquoise 2px dashed !important;
+    margin-bottom: 10px !important;
+    padding-left: 10px !important;
+}
+
+.welcome {
+    font-size: 50px !important;
+    text-align: center !important;
+    margin-top: 50px !important;
+}
