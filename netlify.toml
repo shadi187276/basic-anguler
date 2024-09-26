@@ -1,9 +1,10 @@
 [build]
-    base = "/"
-    command = "npm run build:prod"
-    publish = "dist"
+  command = "npm run build:ssr"
+  publish = "dist/crudApp/browser"
+  functions = "netlify/functions"
 
-    [[redirects]]
-    from = "/*"
-    to = "/index.html"
-    status = 200
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+  force = true
