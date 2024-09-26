@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/crudApp/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -100,6 +100,71 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/crudApp/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/envirments/environment.ts",
+                  "with": "src/envirments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "crudApp:build:development",
+              "serverTarget": "crudApp:server:development"
+            },
+            "production": {
+              "browserTarget": "crudApp:build:production",
+              "serverTarget": "crudApp:server:production",
+              "routes": [
+                "/"
+              ]
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/",
+              "/product",
+              "/product-list"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "crudApp:build:production",
+              "serverTarget": "crudApp:server:production"
+            },
+            "development": {
+              "browserTarget": "crudApp:build:development",
+              "serverTarget": "crudApp:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
