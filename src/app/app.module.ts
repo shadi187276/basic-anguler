@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent],
+  declarations: [AppComponent, ProductComponent, ProductListComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
