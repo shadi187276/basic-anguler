@@ -5,6 +5,6 @@
 
 [[redirects]]
   from = "/*"
-  to = "./netlify/functions/server.js"
+  to = "netlify/functions/server.js"
   status = 200
   force = true
