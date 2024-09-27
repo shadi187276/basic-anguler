@@ -11,7 +11,9 @@
     "dev:ssr": "ng run crudApp:serve-ssr",
     "serve:ssr": "node dist/crudApp/server/main.js",
     "build:ssr": "ng build && ng run crudApp:server",
-    "prerender": "ng run crudApp:prerender"
+    "prerender": "ng run crudApp:prerender",
+    "build:functions": "netlify-lambda build functions",
+    "postbuild": "npm run build:functions"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +29,7 @@
     "@nguniversal/express-engine": "^16.2.0",
     "bootstrap": "^5.3.1",
     "express": "^4.15.2",
+    "netlify-lambda": "^2.0.16",
     "rxjs": "~7.8.0",
     "serverless-http": "^3.2.0",
     "tslib": "^2.3.0",
