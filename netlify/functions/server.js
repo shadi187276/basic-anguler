@@ -1,4 +1,4 @@
-const server = require('../dist/crudApp/server/main');
+const server = require('../../dist/crudApp/server/main');
 const express = require('express');
 const serverless = require('serverless-http'); 
 const app = express();
